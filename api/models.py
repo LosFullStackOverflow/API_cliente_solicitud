@@ -32,5 +32,5 @@ class Solicitud(models.Model):
         'creada': 'Oferta creada',
         'finalizada': 'Finalizado',
     }
-    estadoSolicitud = models.CharField(choices=estadosSolicitud, max_length=50)
+    estadoSolicitud = models.CharField(choices=estadosSolicitud.items(), max_length=50)
     fecha = models.DateField(default=None)
